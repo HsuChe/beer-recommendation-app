@@ -9,8 +9,4 @@ def scrape():
         "mars_fact_table": [1,2,3,4],
         "mars_hemisphere_images":[1,2,3,4]
     }
-    
-    print(mars_dict)
     return mars_dict
-
-scrape()

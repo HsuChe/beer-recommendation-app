@@ -23,4 +23,3 @@ let init = () => {
    scrape()
 }
 
-init()
