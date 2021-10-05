@@ -16,10 +16,10 @@ let searchControl = () => {
 
 let plotly_graph = (data) => {
     console.log(data)
-    console.log(data.featured_image)
-}
+};
 
 let init = () => {
    scrape()
-}
+};
 
+init()

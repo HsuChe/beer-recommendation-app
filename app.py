@@ -11,10 +11,10 @@ mongo = PyMongo(app, uri = mongo_uri)
 def index():
     return render_template('index.html')
 
-# @app.route('/scrape', methods = ["POST"])
-# def data_scrape():
-#     dictionary = scrape()
-#     return jsonify(dictionary)
+@app.route('/scrape', methods = ["POST"])
+def data_scrape():
+    dictionary = scrape()
+    return jsonify(dictionary)
 
 if __name__ == "__main__":
     app.run(debug=True)
