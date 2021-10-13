@@ -3,20 +3,6 @@ from flask import Flask, json, render_template, Response, make_response, jsonify
 from flask_pymongo import PyMongo
 from main.config import mongo_uri
 from bson.json_util import dumps
-import json
-
-def json_response(obj, cls=None):
-    response = make_response(json.dumps(obj, cls=cls))
-    response.content_type = 'application/json'
-
-    return response
-
-class MongoJsonEncoder(json.JSONEncoder):
-    def default(self, obj):
-        if isinstance(obj, bson.ObjectId):
-            return str(obj)
-
-        return json.JSONEncoder.default(self, obj)
 
 
 
